@@ -1,5 +1,6 @@
 import requests as req
 def client_init():
+    #id is only made till 10 then the list reitterates find better solution,also work with some db instead of txt files
     f = open("clientiddb.txt","r")
     check=f.read()
     id=1
@@ -70,6 +71,7 @@ def menu():
     return total
 
 def payment(tot):
+    #Defined this function to mimic payment gateway and making the app wait for a response
     resp = req.get("https://github.com/ilulale/CafeAppn")
     if resp.status_code==200:
         return 1
@@ -77,6 +79,7 @@ def payment(tot):
         return 0    
 
 def token_gen(num):
+    #find a better genration algorithm for tokens
     g=open("tokendb.txt","r")
     check=g.read()
     num=int(num)
