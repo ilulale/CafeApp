@@ -1,3 +1,4 @@
+import requests as req
 def client_init():
     f = open("clientiddb.txt","r")
     check=f.read()
@@ -59,13 +60,50 @@ def menu():
             bkc=int(input("Want to addon? "))
     elif (choice==2):
         print("Lunch")
+        #copy code for lunch from breakfast
     else:
         print("Beverages")
+        #copy code for beverages from breakfast
     print("\tThe order is")
     for x in order:
         print("\t"+x)
     return total
 
+def payment(tot):
+    resp = req.get("https://github.com/ilulale/CafeAppn")
+    if resp.status_code==200:
+        return 1
+    else:
+        return 0    
+
+def token_gen(num):
+    g=open("tokendb.txt","r")
+    check=g.read()
+    num=int(num)
+    i=num+1
+    tok=1
+    for i in check:
+        if(i==check):
+            continue
+    else:
+        tok=i
+    g.close()
+    g = open("tokendb.txt",'a')
+    tok=int(tok)
+    tok=tok+1
+    g.write("\n"+str(tok))
+    print("Your order token is:- "+str(tok))
+    g.close
+    return tok
+
+
 print("Welcome")    
 cid=client_init()
-print("The toal is INR/- "+str(menu()))
+total=menu()
+print("The total is INR/- "+str(total))
+pay=payment(total)
+if pay==1:
+    print("Payment done")
+    token=token_gen(cid)
+else:
+    print("Payment unsuccessful, try again")
