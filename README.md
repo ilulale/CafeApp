@@ -7,4 +7,4 @@ Requirements <br>
   <li>better algorithms in client</li> <br>
   <li>db security and parity</li> <br>
 The following is a prototype mockup of the client app<br>
-![Client Mockup](Capture.png)
+![Client Mockup](/Capture.png)
