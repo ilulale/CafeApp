@@ -7,4 +7,4 @@ Requirements <br>
   <li>better algorithms in client</li> <br>
   <li>db security and parity</li> <br>
 The following is a prototype mockup of the client app<br>
-![Image decription](https://github.com/ilulale/CafeApp/blob/master/Capture.PNG?raw=true)
+![Client Mockup](https://github.com/ilulale/CafeApp/blob/master/Capture.PNG?raw=true)
