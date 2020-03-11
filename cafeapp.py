@@ -1,0 +1,22 @@
+import tkinter as tk
+import random
+def draw(cid,tok):
+	r = tk.Tk()
+	r.geometry('200x200')
+	r.title("CafeApp V0.0")
+	l = tk.Label(r,text="Welcome to the CafeApp")
+	l.pack()
+	cv = tk.Canvas(r)
+	lb1 = tk.Label(cv,text="Cid= "+str(cid))
+	lb1.grid(column=0,row=0)
+	lb2 = tk.Label(cv,text="Token number= "+str(tok))
+	lb2.grid(column=1,row=0)
+	cv.pack()
+	bt1= tk.Button(r,text="Menu")
+	bt1.pack()
+	bt2= tk.Button(r,text="Orders")
+	bt2.pack()
+	r.mainloop()
+a=random.randint(100,999)
+b=random.randint(1,99)
+draw(a,b)
