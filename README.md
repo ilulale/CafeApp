@@ -6,3 +6,5 @@ Requirements <br>
   <li>interlinking of server and client</li> <br>
   <li>better algorithms in client</li> <br>
   <li>db security and parity</li> <br>
+The following is a prototype mockup of the client app
+![Image decription](https://imgur.com/Nd7edJO)
