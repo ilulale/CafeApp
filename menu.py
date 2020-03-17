@@ -2,8 +2,8 @@ import csv
 def set_menu(x):
     with open('menu.csv') as csvfile:
         readCSV = csv.reader(csvfile, delimiter=',')
-        item=[None]*10
-        price=[None]*10
+        item=[None]*20
+        price=[None]*20
         i=0
         for row in readCSV:
             item[i] = row[1]
@@ -16,7 +16,7 @@ def menu_len():
         i=0
         for row in readCSV:
             i=i+1
-    return i-1
+    return i
 
 #ch=int(input("Enter item index : "))
 #menu(ch)
